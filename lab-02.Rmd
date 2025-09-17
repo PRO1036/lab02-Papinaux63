@@ -83,14 +83,18 @@ On observe une certaine linéarité entre les quantités de déchets gérés et 
 
 
 ```{r plastic-waste-population-total}
-# insert code here
+ggplot(plastic_waste,
+       aes(x=plastic_waste_per_cap, y=total_pop))+
+  geom_point()
 ```
 
 ```{r plastic-waste-population-coastal}
-# insert code here
+ggplot(plastic_waste,
+       aes(x=plastic_waste_per_cap, y=coastal_pop))+
+  geom_point()
 ```
 
-Réponse à la question...
+Les 2 graphiques montrent une relation assez similaire. Dans les deux cas, on observe que les pays génerant les plus de déchets par habitant sont des pays à faible population.  
 
 ## Conclusion
 
