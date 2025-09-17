@@ -28,9 +28,13 @@ plastic_waste <- plastic_waste %>%
 ### Exercise 1
 
 ```{r plastic-waste-continent}
-# insert code here
+ggplot(plastic_waste,
+       aes(x=plastic_waste_per_cap))+
+geom_histogram()+
+  facet_wrap(. ~continent, ncol=3)
 ```
 
+Les histogrammes montrent que les gens en Amérique du Nord génèrent en moyenne plus de déchets plastiques que les populations des autres continents  
 ### Exercise 2
 
 ```{r plastic-waste-density}
