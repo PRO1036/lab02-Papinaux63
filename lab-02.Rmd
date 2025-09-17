@@ -52,16 +52,20 @@ Les réglages color et fill se retrouvent dans aes, car ce sont des paramètres 
 Boxplot:
 
 ```{r plastic-waste-boxplot}
-# insert code here
+ggplot(plastic_waste,
+       aes(x=continent, y=plastic_waste_per_cap))+
+geom_boxplot()
 ```
 
 Violin plot:
 
 ```{r plastic-waste-violin}
-# insert code here
+ggplot(plastic_waste,
+       aes(x=continent, y=plastic_waste_per_cap))+
+geom_violin()
 ```
 
-Réponse à la question...
+Les violin plots montrent la distribution des populations des continents en fonction de la quantité de déchets plastiques qu'il génèrent. Par exemple, on retrouve beaucoup de personnes générant une quantité de déchets inférieure à 0,1 en Afrique.
 
 ### Exercise 4
 
