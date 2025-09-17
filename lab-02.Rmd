@@ -38,10 +38,14 @@ Les histogrammes montrent que les gens en Amérique du Nord génèrent en moyenn
 ### Exercise 2
 
 ```{r plastic-waste-density}
-# insert code here
+ggplot(plastic_waste,
+       aes(x=plastic_waste_per_cap,
+           color=continent,
+           fill=continent))+
+       geom_density(alpha=0.4)
 ```
 
-Réponse à la question...
+Les réglages color et fill se retrouvent dans aes, car ce sont des paramètres dépendant de variables. Dans ce cas, il s'agit des continents. Par contre, la transparence (alpha) se retrouve dans geom puisque cette propriété est indépendante des variables. Il s'agit d'un setting.
 
 ### Exercise 3
 
